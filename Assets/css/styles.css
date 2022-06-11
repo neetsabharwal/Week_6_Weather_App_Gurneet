@@ -25,7 +25,7 @@ h1{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 48px;
     font-weight: normal;
-    border-bottom: 3px solid floralwhite;
+    border-bottom: 2px solid floralwhite;
 }
 
 .page{
@@ -35,7 +35,7 @@ h1{
 }
 
 .searchSection{
-    border-right: 3px solid skyblue;
+    border-right: 2px solid skyblue;
     width: 20%;
     height: 100%;
 }
@@ -47,7 +47,7 @@ h1{
 
 .input{
     height: 40px;
-    border: 3px solid skyblue;
+    border: 2px solid skyblue;
     outline: none;
     border-radius: 5px;
     width: 100%;
@@ -65,7 +65,7 @@ h1{
     color: skyblue;
     width: 100%;
     height: 40px;
-    border: 3px solid  skyblue;
+    border: 2px solid  skyblue;
     border-radius: 5px;
     font-size: larger;
 }
@@ -82,24 +82,26 @@ ul{
     padding-top: 35px;
     margin-right: 5px;
     text-align: center;
-    border-top: 3px dotted skyblue;
+    border-top: 2px dotted skyblue;
 }
 
 li{
     height: 35px;
     width: 100%;
-    border: 3px solid skyblue;
+    border: 2px solid skyblue;
     border-radius: 5px;
     margin: 5px 0px;
     align-items: center;
     background-color: skyblue;
     color: white;
     padding-top: 5px;
+    font-size: large;
 }
 
 li:hover{
     background-color: white;
     color:  skyblue;
+    font-weight: bold;
 }
 
 .weatherSection{
