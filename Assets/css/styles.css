@@ -73,6 +73,7 @@ h1{
     color: red;
     border: 2px solid red;
     height: 35px;
+    visibility: hidden;
 }
 
 .searchButton:hover,
@@ -118,6 +119,7 @@ li:hover{
     display: flex;
     flex-direction: column;
     width: 100%;
+    visibility: hidden;
 }
 
 .details{
@@ -161,6 +163,7 @@ h3{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .day{
@@ -180,5 +183,8 @@ h3{
 @media screen and (max-width:800px) {
     .delButton{
         font-size: small;
+    }
+    h1{
+        font-size: 36px;
     }
 }
