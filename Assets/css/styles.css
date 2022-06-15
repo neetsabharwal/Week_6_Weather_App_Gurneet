@@ -17,12 +17,13 @@ header{
     background-position:bottom;
     background-size: cover;
     border: 2px solid skyblue;
+    border-radius: 5px;
 }
 
 h1{
     text-align: center;
     color:floralwhite;
-    padding: 30px 0 10px 0;
+    padding: 18px 0 6px 0;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 48px;
     font-weight: normal;
@@ -31,6 +32,7 @@ h1{
 .page{
     display: flex;
     flex-direction: row;
+    height: 100%;
 }
 
 .searchSection{
@@ -73,7 +75,7 @@ h1{
     color: red;
     border: 2px solid red;
     height: 35px;
-    visibility: hidden;
+    /* visibility: hidden; */
 }
 
 .searchButton:hover,
@@ -112,7 +114,6 @@ li{
 li:hover{
     background-color: white;
     color:  skyblue;
-    font-weight: bold;
 }
 
 .weatherSection{
@@ -120,43 +121,77 @@ li:hover{
     flex-direction: column;
     width: 100%;
     visibility: hidden;
+    height: 86vh;
 }
 
 .details{
     display: flex;
     flex-direction: column;
     border: 2px solid skyblue;
-    margin: 5px 0px 0px 5px;
-    padding: 5px 0px 10px 10px;
-    height: 40%;
+    border-radius: 5px;
+    margin: 5px 0px 10px 5px;
+    padding: 5px 0px 5px 10px;
+    height: auto;
 }
 
+.title{
+    display: flex;
+    flex-direction: row;
+}
+
+
 h2{
-    margin: 10px;
+    margin: 5px;
     color: skyblue;
     font-size: xx-large;
     font-weight: 600;
 }
 
+#cityUVIndex{
+    color: floralwhite;
+    margin-left: 26px;
+    padding: 2px 5px 2px 4px;
+    width:fit-content;
+    border-radius: 5px;
+}
+
+.weatherImg,
+#day1img,
+#day2img,
+#day3img,
+#day4img,
+#day5img{
+    height: 60px;
+    width: fit-content;
+}
+
+.weatherImg{
+    position: relative;
+    bottom: 5px;
+}
+
 h3{
-    margin: 10px;
+    margin: 5px;
     color: skyblue;
     font-weight: 500;
+    padding-left: 15px;
+    margin-left: 15px;
 }
 
 .forecast{
     display: flex;
     flex-direction: column;
     border: 2px solid skyblue;
+    border-radius: 5px;
     margin: 5px 0px 0px 5px;
-    padding: 10px 10px 10px 10px;
-    height: 60%;
+    padding: 0px 10px 0px 10px;
+    height: auto;
 }
 
 .forecast h2{
     font-weight: 300;
     font-size:x-large;
-    padding: 10px 0px 35px 0px;
+    padding: 10px 0px 15px 0px;
 }
 
 .forecastdivs{
@@ -164,6 +199,8 @@ h3{
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
+    height: auto;
+    margin-bottom: 10px;
 }
 
 .day{
@@ -171,13 +208,16 @@ h3{
     flex-direction: column;
     background-color: skyblue;
     border-radius: 5px;
-    width: 15%;
+    width: auto;
     height: 100%;
     justify-content: space-around;
+
 }
 
 .day h3{
     color: white;
+    padding: 15px 20px;
+    margin: 0px;
 }
 
 @media screen and (max-width:800px) {

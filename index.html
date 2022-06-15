@@ -20,7 +20,7 @@
                 <button class="searchButton btn">Search!</button>
             </div>
             <div class="searchHistory">
-                <ul>
+                <ul class="searchhistorylis">
                 </ul>
             </div>
             <div class="inputdiv">
@@ -29,20 +29,23 @@
         </section>
         <section class="weatherSection">
             <div class="details">
-                <h2>
+                <div class="title">
+                    <h2 id="cityName">
+                        
+                    </h2>
+                    <img class="weatherImg"/>
+                </div>
+                <h3 id="cityTemp">
                     
-                </h2>
-                <h3>
-                    Temp: 
                 </h3>
-                <h3>
-                    Wind: 
+                <h3 id="cityWind">
+                    
                 </h3>
-                <h3>
-                    Humidity: 
+                <h3 id="cityHumidity">
+                    
                 </h3>
-                <h3>
-                    UV Index: 
+                <h3 id="cityUVIndex">
+                    
                 </h3>
             </div>
             <div class="forecast">
@@ -53,87 +56,75 @@
                 </div>
                 <div class="forecastdivs">
                     <div class="day">
-                        <h3>
-                            
+                        <h3 id="day1date">
                         </h3>
-                        <h3>
-                            
+                        <img id="day1img">
+                        <h3 id="day1temp"> 
                         </h3>
-                        <h3>
-                            Temp: 
-                        </h3>
-                        <h3>
+                        <h3 id="day1wind">
                             Wind: 
                         </h3>
-                        <h3>
+                        <h3 id="day1humidity">
                             Humidity: 
                         </h3>
                     </div>
                     <div class="day">
-                        <h3>
+                        <h3 id="day2date">
                             
                         </h3>
-                        <h3>
-                            
-                        </h3>
-                        <h3>
+                        <img id="day2img">
+                        <h3 id="day2temp">
                             Temp: 
                         </h3>
-                        <h3>
+                        <h3 id="day2wind">
                             Wind: 
                         </h3>
-                        <h3>
+                        <h3 id="day2humidity">
                             Humidity: 
                         </h3>
                     </div>
                     <div class="day">
-                        <h3>
+                        <h3 id="day3date">
                             
                         </h3>
-                        <h3>
-                            
-                        </h3>
-                        <h3>
+                        <img id="day3img">
+                        <h3 id="day3temp">
                             Temp: 
                         </h3>
-                        <h3>
+                        <h3 id="day3wind">
                             Wind: 
                         </h3>
-                        <h3>
+                        <h3 id="day3humidity">
                             Humidity: 
                         </h3>
                     </div>
                     <div class="day">
-                        <h3>
+                        <h3 id="day4date">
                             
                         </h3>
-                        <h3>
-                            
-                        </h3>
-                        <h3>
+                        <img id="day4img">
+                        <h3 id="day4temp">
                             Temp: 
                         </h3>
-                        <h3>
+                        <h3 id="day4wind">
                             Wind: 
                         </h3>
-                        <h3>
+                        <h3 id="day4humidity">
                             Humidity: 
                         </h3>
                     </div>
                     <div class="day">
-                        <h3>
+                        <h3 id="day5date">
                             
                         </h3>
-                        <h3>
-                            
-                        </h3>
-                        <h3>
+                        <img id="day5img">
+                        <h3 id="day5temp">
                             Temp: 
                         </h3>
-                        <h3>
+                        <h3 id="day5wind">
                             Wind: 
                         </h3>
-                        <h3>
+                        <h3 id="day5humidity">
                             Humidity: 
                         </h3>
                     </div>
@@ -141,6 +132,7 @@
             </div>
         </section>
     </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.14.1/moment.min.js"></script>
     <script src="./Assets/js/script.js"></script>
 </body>
 </html>
