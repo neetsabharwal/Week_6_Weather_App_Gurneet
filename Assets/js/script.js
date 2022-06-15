@@ -5,6 +5,7 @@ let lon = 0;
 let date = moment().format('MMMM Do YYYY, h:mm:ss a');
 let city = '';
 let count = 0;
+let weatherData = [];
 
 //Event listener on Search button
 document.querySelector('.searchButton').addEventListener('click',function(){
@@ -38,6 +39,7 @@ document.querySelector('.searchButton').addEventListener('click',function(){
             liEl = document.createElement('li');
             liEl.textContent = city;
             liEl.setAttribute('key',count);
+            liEl.setAttribute('class','list');
             count += 1;
 
             document.querySelector('.delButton').style.visibility = 'visible';
@@ -99,6 +101,14 @@ document.querySelector('.searchButton').addEventListener('click',function(){
                 document.querySelector('.searchButton').style.visibility = 'hidden';
                 alert('Please clear history');
             }
+            
+            let dataObj = {
+                city : city,
+                weather : data
+            };
+            weatherData.push(dataObj);
+            localStorage.setItem('weatherData',JSON.stringify(weatherData));
+
         })
     }
 })
@@ -112,4 +122,11 @@ document.querySelector('.delButton').addEventListener('click', function(){
     document.querySelector('.input').value = '';
     localStorage.clear();
     document.querySelector('.searchhistorylis').innerHTML = '';
+})
+
+document.querySelector('ul').addEventListener('click',function(Event){
+    if(Event.target=='li'){
+        console.log('hff');        
+    }
+
 })
