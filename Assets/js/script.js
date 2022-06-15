@@ -8,9 +8,6 @@ let count = 0;
 
 //Event listener on Search button
 document.querySelector('.searchButton').addEventListener('click',function(){
-    
-    //Display weather section
-    document.querySelector('.weatherSection').style.visibility = 'visible';
 
     //Get city name
     city = document.querySelector('.input').value;
@@ -25,6 +22,9 @@ document.querySelector('.searchButton').addEventListener('click',function(){
         console.log(data);
         getUV();
     })
+    .catch(function(){
+        alert('City not found!');
+    })
 
     function getUV(){
         fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${APIKey}`)
@@ -32,14 +32,16 @@ document.querySelector('.searchButton').addEventListener('click',function(){
         .then(data => {
             console.log(data);
 
+            //Display weather section
+            document.querySelector('.weatherSection').style.visibility = 'visible';
+
             liEl = document.createElement('li');
             liEl.textContent = city;
             liEl.setAttribute('key',count);
             count += 1;
-            if(count===10)
-            {
-                document.querySelector('.searchButton').style.display = 'none';
-            }
+
+            document.querySelector('.delButton').style.visibility = 'visible';
+
             document.querySelector('.searchhistorylis').appendChild(liEl);
 
             document.querySelector('#cityName').textContent = city + ' - ' + date;
@@ -91,6 +93,23 @@ document.querySelector('.searchButton').addEventListener('click',function(){
             else if (uvi<5){
                 document.querySelector('#cityUVIndex').style.backgroundColor = 'green';
             }
+
+            if(count===10)
+            {
+                document.querySelector('.searchButton').style.visibility = 'hidden';
+                alert('Please clear history');
+            }
         })
     }
+})
+
+//Event Listener on Delete button
+document.querySelector('.delButton').addEventListener('click', function(){
+    count = 0;
+    document.querySelector('.delButton').style.visibility = 'hidden';
+    document.querySelector('.searchButton').style.visibility = 'visible';
+    document.querySelector('.weatherSection').style.visibility = 'hidden';
+    document.querySelector('.input').value = '';
+    localStorage.clear();
+    document.querySelector('.searchhistorylis').innerHTML = '';
 })
