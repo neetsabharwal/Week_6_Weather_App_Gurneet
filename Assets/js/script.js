@@ -118,9 +118,6 @@ document.querySelector('.searchButton').addEventListener('click',function(){
                 localStorage.setItem('weatherData',JSON.stringify(weatherData));
             }
 
-            //clear input field post search
-            document.querySelector('.input').value = '';
-
         })
     }
 })
