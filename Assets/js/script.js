@@ -117,7 +117,6 @@ document.querySelector('.searchButton').addEventListener('click',function(){
                 weatherData.push(dataObj);
                 localStorage.setItem('weatherData',JSON.stringify(weatherData));
             }
-
         })
     }
 })
